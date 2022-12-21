@@ -1,0 +1,38 @@
+### Wireshark ###:
+open using 
+--sudo wireshark
+select any interface
+commands:
+go to filter section:
+	type:
+	ip.addr==<ip_address>
+	ip.src==<ip_address>
+	ip.dst==<ip_address>
+	tcp
+	http
+	tcp.port
+	http.request
+	http.analysis.flags
+	tcp contains google(can be any domain you've searched in browser)
+	!(arp)
+	udp contains google(can be any domain you've searched in browser)
+	
+	
+	
+	
+### tcpdump commands  ##
+	to chech whether tcpdump is installed or not
+	which tcpdump
+	
+	commands
+	
+	sudo tcpdump -D
+	 output:U'll get some interfaces select any of those interfaces
+	sudo tcpdump -i any -c5 -nn
+	sudo tcpdump -i any c5 icmp
+	sudo tcpdump -i any -c5 -nn host <ip address>
+	sudo tcpdump -i any -c5 -nn port 80
+	sudo tcpdump -i any -c5 -nn src <ip address>
+	sudo tcpdump -i any -c20 -w webserver.pcap
+	sudo tcpdump -i any -c20 -r webserver.pcap
+	
